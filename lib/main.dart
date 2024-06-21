@@ -1,7 +1,7 @@
 import 'package:app/telas/criar_conta.dart';
 import 'package:app/telas/telainicial.dart';
 import 'package:flutter/material.dart';
-
+import 'package:app/telas/login.dart';
 void main() {
   runApp(const MyApp());
 }

@@ -68,6 +68,7 @@ flutter:
     - lib/imagens/recompor.png
     - lib/imagens/iconepessoa.png
     - lib/imagens/fundo.png
+    - lib/imagens/icone composteira.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

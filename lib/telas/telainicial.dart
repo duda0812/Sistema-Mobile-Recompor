@@ -1,4 +1,5 @@
 import 'package:app/telas/criar_conta.dart';
+import 'package:app/telas/login.dart';
 import 'package:flutter/material.dart';
 
 class Telainicial extends StatelessWidget {
@@ -64,7 +65,7 @@ class Telainicial extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Cadastro()), //mudar para a tela de login quando ela for criada
+                    MaterialPageRoute(builder: (context) => const Login()), //mudar para a tela de login quando ela for criada
                   );},
                 child: const Text(
                   'Login',
