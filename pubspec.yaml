@@ -64,9 +64,10 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - lib/imagens/fundo do app.jpg
+    
     - lib/imagens/recompor.png
     - lib/imagens/iconepessoa.png
+    - lib/imagens/fundo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,3 +1,4 @@
+import 'package:app/telas/criar_conta.dart';
 import 'package:flutter/material.dart';
 
 class Telainicial extends StatelessWidget {
@@ -6,91 +7,103 @@ class Telainicial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-      Container(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("lib/imagens/fundo.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: const EdgeInsets.only(
           top: 60,
           left: 40,
           right: 40,
         ),
-        color: const Color.fromARGB(255, 125, 228, 132),
-
+        //color: const Color.fromARGB(255, 125, 228, 132),
         child: ListView(
-          children: 
-            <Widget> [
-              SizedBox(
-                width: 250,
-                height: 250,
-                child: Image.asset('lib/imagens/recompor.png') ,
-              ),
-              const SizedBox(height: 50), // Espaçamento entre a imagem e o botão
+          children: <Widget>[
             SizedBox(
-              width: double.infinity, // Largura do botão
-              height: 60, // Altura do botão
-
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                side: const BorderSide(
-                  color: Colors.white,
-                  width: 3
-                )
-              ),
-              onPressed: () {},
-              child: const Text('Criar Conta', style: TextStyle(fontSize: 20, color: Colors.white),),
+              width: 250,
+              height: 250,
+              child: Image.asset('lib/imagens/recompor.png'),
             ),
-            ),
-
-            const SizedBox(height: 50), // Espaçamento entre a imagem e o botão
+            const SizedBox(height: 50), 
             SizedBox(
-              width: double.infinity, // Largura do botão
-              height: 60, // Altura do botão
-
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                side: const BorderSide(
-                  color: Colors.white,
-                  width: 3
-                )
+              width: double.infinity, 
+              height: 60, 
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(
+                    color: Colors.white,
+                    width: 3,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Cadastro()),
+                  );
+                },
+                child: const Text(
+                  'Criar Conta',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
               ),
-              onPressed: () {},
-              child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.white),),
             ),
-            ),
-
-            const SizedBox(height: 50), // Espaçamento entre a imagem e o botão
+            const SizedBox(height: 50),
             SizedBox(
-              width: double.infinity, // Largura do botão
-              height: 60, // Altura do botão
-
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                side: const BorderSide(
-                  color: Colors.white,
-                  width: 3
-                )
+              width: double.infinity, 
+              height: 60, 
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(
+                    color: Colors.white,
+                    width: 3,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Cadastro()), //mudar para a tela de login quando ela for criada
+                  );},
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
               ),
-              onPressed: () {},
-              child: const Text('Usar sem conta', style: TextStyle(fontSize: 20, color: Colors.white),),
             ),
+            const SizedBox(height: 50), 
+            SizedBox(
+              width: double.infinity, 
+              height: 60,
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(
+                    color: Colors.white,
+                    width: 3,
+                  ),
+                ),
+                onPressed: () { Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Cadastro()), //mudar para a tela de  usar sem conta quando ela for criada
+                  );},
+                child: const Text(
+                  'Usar sem conta',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
             ),
-            
             const SizedBox(height: 200),
-            Center(child: Text('Compostagem e hábitos sustentáveis', style: TextStyle(fontSize: 18, color: Colors.white), ))
-            ],
-            
-            
-        ) ,
-
-      
-        
-      )
-      
-
-
-      );
-
-
-    
+            Center(
+              child: Text(
+                'Compostagem e hábitos sustentáveis',
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
