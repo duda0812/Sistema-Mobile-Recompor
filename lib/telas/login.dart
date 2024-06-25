@@ -1,3 +1,5 @@
+import 'package:app/telas/criar_conta.dart';
+import 'package:app/telas/telainicial.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -27,15 +29,17 @@ class _LoginState extends State<Login> {
           left: 40,
           right: 40,
         ),
-        child: ListView(
-          children: <Widget>[
-            Center(
-              child: SizedBox(
-                width: 250,
-                height: 250,
-                child: Image.asset('lib/imagens/icone composteira.png'),
-              ),
-            ),
+        child: 
+            Column(
+              children: [
+                Center(
+                  child: SizedBox(
+                    width: 250,
+                    height: 250,
+                    child: Image.asset('lib/imagens/icone composteira.png'),
+                  ),
+                ),
+               
             const SizedBox(height: 50),
             TextFormField(
               controller: _usernameController,
@@ -92,9 +96,10 @@ class _LoginState extends State<Login> {
               style: TextStyle(color: Colors.white),
             ),
             const SizedBox(height: 30),
+            
             SizedBox(
-              width: 60, 
-              height: 60, 
+              width: 250,
+              height: 50, 
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(
@@ -110,9 +115,16 @@ class _LoginState extends State<Login> {
                 },child: const Text(
                   'Entrar',
                   style: TextStyle(fontSize: 20, color: Colors.white),
-                ),))
-              
-            
+                ),),),
+            const SizedBox(height: 280), 
+            TextButton(onPressed: () {
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Cadastro()),
+              );
+
+            },
+            child: const Text('Cadastrar', style: TextStyle(color: Colors.white, fontSize: 20),))
           ],
         ),
       ),

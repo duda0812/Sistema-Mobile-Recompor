@@ -21,14 +21,16 @@ class Telainicial extends StatelessWidget {
           right: 40,
         ),
         //color: const Color.fromARGB(255, 125, 228, 132),
-        child: ListView(
-          children: <Widget>[
-            SizedBox(
-              width: 250,
-              height: 250,
-              child: Image.asset('lib/imagens/recompor.png'),
-            ),
-            const SizedBox(height: 50), 
+        child: 
+            Column(
+              children: [
+                SizedBox(
+                  width: 250,
+                  height: 250,
+                  child: Image.asset('lib/imagens/recompor.png'),
+                ),
+              
+             const SizedBox(height: 50), 
             SizedBox(
               width: double.infinity, 
               height: 60, 
@@ -95,14 +97,15 @@ class Telainicial extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 200),
-            Center(
+            const Center(
               child: Text(
                 'Compostagem e hábitos sustentáveis',
                 style: TextStyle(fontSize: 18, color: Colors.white),
               ),
             ),
           ],
-        ),
+            
+      ),
       ),
     );
   }

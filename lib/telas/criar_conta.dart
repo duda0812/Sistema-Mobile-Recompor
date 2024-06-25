@@ -28,15 +28,17 @@ class _CadastroState extends State<Cadastro> {
           left: 40,
           right: 40,
         ),
-        child: ListView(
-          children: <Widget>[
-            Center(
-              child: SizedBox(
-                width: 250,
-                height: 250,
-                child: Image.asset('lib/imagens/iconepessoa.png'),
-              ),
-            ),
+        child: 
+            Column(
+              children: [
+                Center(
+                  child: SizedBox(
+                    width: 250,
+                    height: 250,
+                    child: Image.asset('lib/imagens/iconepessoa.png'),
+                  ),
+                ),
+              
             const SizedBox(height: 50),
             TextFormField(
               controller: _usernameController,
@@ -114,8 +116,8 @@ class _CadastroState extends State<Cadastro> {
             ),
             const SizedBox(height: 50),
             SizedBox(
-              width: double.infinity, 
-              height: 60, 
+              width: 250, 
+              height: 50, 
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(
