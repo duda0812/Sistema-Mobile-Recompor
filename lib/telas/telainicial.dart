@@ -96,12 +96,11 @@ class Telainicial extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 200),
-            const Center(
-              child: Text(
-                'Compostagem e hábitos sustentáveis',
-                style: TextStyle(fontSize: 18, color: Colors.white),
-              ),
+            //const SizedBox(height: 200),
+            const Spacer(),
+            Text(
+              'Compostagem e hábitos sustentáveis',
+              style: TextStyle(fontSize: 18, color: Colors.white),
             ),
           ],
             
