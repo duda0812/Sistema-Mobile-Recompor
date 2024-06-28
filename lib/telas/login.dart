@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
             TextFormField(
               controller: _usernameController,
               decoration: InputDecoration(
-                labelText: 'Nome de Usuário',
+                labelText: 'Usuário',
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
@@ -116,7 +116,7 @@ class _LoginState extends State<Login> {
                   'Entrar',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),),),
-            const SizedBox(height: 280), 
+            const Spacer(), 
             TextButton(onPressed: () {
               Navigator.push(
                     context,
@@ -124,7 +124,9 @@ class _LoginState extends State<Login> {
               );
 
             },
-            child: const Text('Cadastrar', style: TextStyle(color: Colors.white, fontSize: 20),))
+            child: const Text('Cadastrar', style: TextStyle(color: Colors.white, fontSize: 20),),
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),

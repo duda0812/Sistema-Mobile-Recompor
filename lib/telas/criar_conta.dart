@@ -43,7 +43,7 @@ class _CadastroState extends State<Cadastro> {
             TextFormField(
               controller: _usernameController,
               decoration: InputDecoration(
-                labelText: 'Nome de Usuário',
+                labelText: 'Usuário',
                 labelStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
@@ -60,6 +60,7 @@ class _CadastroState extends State<Cadastro> {
               ),
               style: TextStyle(color: Colors.white),
             ),
+
             const SizedBox(height: 20),
             TextFormField(
               controller: _emailController,
@@ -81,6 +82,7 @@ class _CadastroState extends State<Cadastro> {
               ),
               style: TextStyle(color: Colors.white),
             ),
+
             const SizedBox(height: 20),
             TextFormField(
               controller: _passwordController,

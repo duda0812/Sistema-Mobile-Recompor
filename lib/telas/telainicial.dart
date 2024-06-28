@@ -53,7 +53,7 @@ class Telainicial extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             SizedBox(
               width: double.infinity, 
               height: 60, 
@@ -75,7 +75,7 @@ class Telainicial extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 50), 
+            const SizedBox(height: 30), 
             SizedBox(
               width: double.infinity, 
               height: 60,
@@ -98,10 +98,13 @@ class Telainicial extends StatelessWidget {
             ),
             //const SizedBox(height: 200),
             const Spacer(),
-            Text(
-              'Compostagem e hábitos sustentáveis',
-              style: TextStyle(fontSize: 18, color: Colors.white),
+            Center(
+              child: Text(
+                'Compostagem e hábitos sustentáveis',
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
             ),
+            const SizedBox(height: 20),
           ],
             
       ),
