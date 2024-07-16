@@ -17,6 +17,7 @@ class _CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      
       key: _formKey,
       child: Scaffold(
         body: Container(
@@ -97,14 +98,16 @@ class _CadastroState extends State<Cadastro> {
               const SizedBox(height: 20),
               TextFormField(
                 validator: (String? value) {
-                  if (value != null && value.isEmpty) {
+                  if (value?.length ?? 0 < 3){
+
+                  }
+                  else if (value != null && value.isEmpty) {
                     return "Insira uma senha";
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Cadastro()),
-                    ); //ATENÇÃO: ajeitar depois!
-                  };
+                  }
+                      
+
+                  //return null;
+                  
                 },
                 controller: _passwordController,
                 obscureText: _isObscure,
@@ -150,10 +153,13 @@ class _CadastroState extends State<Cadastro> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        print(_usernameController.text);
-                        print(_emailController.text);
-                        print(_passwordController.text);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Cadastro()));                     
                       }
+                      
+                
                       /*Navigator.push(
                         context,
                         MaterialPageRoute(

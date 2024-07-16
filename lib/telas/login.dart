@@ -73,13 +73,8 @@ class _LoginState extends State<Login> {
                 validator: (String? value) {
                   if (value != null && value.isEmpty) {
                     return "Insira sua senha";
-                  } 
-                  else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Login()),
-                    ); //ATENÇÃO: ajeitar depois!
-                  };
+                  }
+                  return null;
                 },
                 controller: _passwordController,
                 obscureText: _isObscure,
@@ -125,13 +120,11 @@ class _LoginState extends State<Login> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      print(_usernameController.text);
-                      print(_passwordController.text);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Login()));
                     }
-                    /*Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Login()),
-                    );*/
                   },
                   child: const Text(
                     'Entrar',
