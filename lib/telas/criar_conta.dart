@@ -17,7 +17,6 @@ class _CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      
       key: _formKey,
       child: Scaffold(
         body: Container(
@@ -46,6 +45,8 @@ class _CadastroState extends State<Cadastro> {
                 validator: (String? value) {
                   if (value != null && value.isEmpty) {
                     return "Insira um nome de usuário";
+                  }else if ((value?.length ?? 0) < 4 || (value?.length ?? 0) > 8) {
+                    return "Insira um nome de usuário de 4 a 8 caracteres";
                   }
                   return null;
                 },
@@ -73,6 +74,9 @@ class _CadastroState extends State<Cadastro> {
                 validator: (String? value) {
                   if (value != null && value.isEmpty) {
                     return "Insira um endereço de email";
+                  } 
+                  else if (!(value?.contains('@') ?? false)) { 
+                    return "Endereço de email inválido";
                   }
                   return null;
                 },
@@ -98,16 +102,13 @@ class _CadastroState extends State<Cadastro> {
               const SizedBox(height: 20),
               TextFormField(
                 validator: (String? value) {
-                  if (value?.length ?? 0 < 3){
-
-                  }
-                  else if (value != null && value.isEmpty) {
+                  if (value != null && value.isEmpty) {
                     return "Insira uma senha";
+                  } else if ((value?.length ?? 0) < 4 || (value?.length ?? 0) > 8) {
+                    return "Insira uma senha de 4 a 8 caracteres";
                   }
-                      
 
                   //return null;
-                  
                 },
                 controller: _passwordController,
                 obscureText: _isObscure,
@@ -156,10 +157,9 @@ class _CadastroState extends State<Cadastro> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Cadastro()));                     
+                                builder: (context) => const Cadastro()));
                       }
-                      
-                
+
                       /*Navigator.push(
                         context,
                         MaterialPageRoute(
