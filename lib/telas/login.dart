@@ -20,6 +20,24 @@ class _LoginState extends State<Login> {
     return Form(
       key: _formKey,
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+            leading:
+            IconButton(
+              iconSize: 40,
+              icon: const Icon(Icons.arrow_back),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Telainicial()),
+                );
+              },
+            ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(

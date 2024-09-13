@@ -10,7 +10,6 @@ class compostagem_sig extends StatelessWidget {
       home: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          
             leading:
             IconButton(
               iconSize: 40,

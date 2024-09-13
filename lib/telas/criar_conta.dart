@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app/telas/telainicial.dart';
 
 class Cadastro extends StatefulWidget {
   const Cadastro({Key? key}) : super(key: key);
@@ -19,6 +20,26 @@ class _CadastroState extends State<Cadastro> {
     return Form(
       key: _formKey,
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+            leading:
+            IconButton(
+              iconSize: 40,
+              icon: const Icon(Icons.arrow_back),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Telainicial()),
+                );
+              },
+            ),
+          
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
