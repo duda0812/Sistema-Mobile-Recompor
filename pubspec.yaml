@@ -72,6 +72,13 @@ flutter:
     - lib/imagens/restos1.jpg
     - lib/imagens/maoterra.jpg
     - lib/imagens/gota.jpg
+    - lib/imagens/torneira.png
+    - lib/imagens/chuveiro.jpg
+    - lib/imagens/lampada.jpg
+    - lib/imagens/sacola.jpg
+    - lib/imagens/geladeira.jpg
+    - lib/imagens/janela.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
