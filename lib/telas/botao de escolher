@@ -1,0 +1,25 @@
+/*ValueListenableBuilder(
+                            valueListenable: dropValue,
+                            builder: (BuildContext context, String value, _) {
+                              return SizedBox(
+                                width: 280,
+                                child: DropdownButtonFormField<String>(
+                                  isExpanded: true,
+                                  hint: const Text("Opções"),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(6)
+                                    )
+                                  ) ,
+                                  value: (value.isEmpty) ? null : value,
+                                  onChanged: (escolha) =>
+                                      dropValue.value = escolha.toString(),
+                                  items: dropOpcoes
+                                      .map((op) => DropdownMenuItem(
+                                            value: op,
+                                            child: Text(op),
+                                          ))
+                                      .toList(),
+                                ),
+                              );
+                            })*/

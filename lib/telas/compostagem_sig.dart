@@ -1,8 +1,8 @@
 import 'package:app/telas/telainicial.dart';
 import 'package:flutter/material.dart';
 
-class compostagem_sig extends StatelessWidget {
-  const compostagem_sig({super.key});
+class Compostagem_sig extends StatelessWidget {
+  const Compostagem_sig({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+import 'package:app/telas/comp_terra.dart';
 import 'package:app/telas/compostagem_sig.dart';
 import 'package:app/telas/criar_conta.dart';
 import 'package:app/telas/habitos.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Habitos()
+      home: Comp_terra()
     );
   }
 }
