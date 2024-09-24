@@ -78,6 +78,8 @@ flutter:
     - lib/imagens/sacola.jpg
     - lib/imagens/geladeira.jpg
     - lib/imagens/janela.jpg
+    - lib/imagens/pa.png
+    - lib/imagens/lamp2.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
