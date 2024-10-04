@@ -68,7 +68,9 @@ class Comp_terra extends StatelessWidget {
                         },
                         child: const Text(
                           'Terra',
-                          style: TextStyle(fontSize: 20, color: Colors.grey),
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 20, 20, 20)),
                         ),
                       ),
                     ),
@@ -127,6 +129,7 @@ class Comp_terra extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 10),
                     Container(
                       height: 120,
                       width: double.infinity,
@@ -164,7 +167,163 @@ class Comp_terra extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Column(children: [
+                      const SizedBox(height: 30),
+                      Terra(
+                          'Folhas secas',
+                          'Folhas secas de qualquer tipo ou serragem.',
+                          'lib/imagens/folhaSeca.jpg',
+                          'Obs.: Quantidade recomendável 500 g'),
+                      Terra(
+                          'Terra',
+                          'Terra preta.',
+                          'lib/imagens/terraPreta.jpg',
+                          'Obs: Quantidade recomendável 200 g'),
+                      Terra('Resíduos orgânicos','Como: pó de café, casca de alimentos e frutas.', 'lib/imagens/cascas.jpg', '' ),
+                    ]),
+                    Text("Tutorial", style: TextStyle(fontSize: 23, color: Colors.white),),
+                    const SizedBox(height: 30),
+                    Tutorial('lib/imagens/paTerra.jpg','Passo 1', 'Cave um buraco para os resíduos.' )
                   ])
                 ]))));
+  }
+}
+
+class Terra extends StatefulWidget {   
+  final String foto;
+  final String titulo;
+  final String texto;
+  final String obs;
+  const Terra(this.titulo, this.texto, this.foto, this.obs, {Key? key})
+      : super(key: key);
+
+  @override
+  State<Terra> createState() => _TerraState();
+}
+
+class _TerraState extends State<Terra> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 20),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 50.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.titulo,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.green.shade100,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  constraints: BoxConstraints(maxWidth: 400),
+                  child: Text(
+                    widget.texto,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Container(
+                    height: 120,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(widget.foto),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  constraints: BoxConstraints(maxWidth: 400),
+                  child: Text(
+                    widget.obs,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.green.shade100,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Tutorial extends StatefulWidget {
+  final String foto;
+  final String titulo;
+  final String texto;
+  const Tutorial(this.foto, this.titulo, this.texto,  {Key? key}) : super(key: key);
+
+  @override
+  State<Tutorial> createState() => _TutorialState();
+}
+
+class _TutorialState extends State<Tutorial> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 10.0),
+          child: Container(
+            height: 120,
+            width: 120,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(widget.foto),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 50.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.titulo,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green.shade100,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Container(
+                  constraints: BoxConstraints(maxWidth: 400),
+                  child: Text(
+                    widget.texto,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
